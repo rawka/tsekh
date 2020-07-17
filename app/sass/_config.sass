@@ -1,0 +1,40 @@
+// USER VARIABLES SECTION
+
+$fontsize: 10px // Body Font Size
+$textcolor: #333333 // Text Color
+$btncolor: #3454F5
+$gilroy: Gilroy, sans-serif // Roboto Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: local($fname), url($furl) format('woff2')
+
+@include font('Gilroy', normal, 400, '../fonts/Gilroy-Regular.woff2')
+@include font('Gilroy', semibold, 600, '../fonts/Gilroy-Semibold.woff2')
+@include font('Gilroy', bold, 700, '../fonts/Gilroy-Bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+body
+	font-family: $gilroy
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor
