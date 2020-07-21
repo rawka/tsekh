@@ -1,5 +1,7 @@
 @import config
-
+.container-l
+  @extend .container
+  max-width: 1180px
 .header
   min-height: 110px
   &__logo
@@ -55,13 +57,61 @@
       font-size: 1.6em
       font-weight: bold
       text-decoration: none
-      background-color: $btncolor
+      background-color: $activecolor
       color: white
       &:hover
         text-decoration: none
         color: white
-
-
+.features
+  margin-top: 100px
+  &__left
+    h2
+      font-weight: bold
+      font-size: 4em
+      line-height: 48px
+    p
+      font-size: 2em
+      line-height: 32px
+  &__right
+    h3
+      font-size: 2.4em
+      font-weight: bold
+      line-height: 32px
+    p
+      font-size: 1.8em
+      line-height: 28px
+.promo
+  background-color: $activecolor
+  &__inner
+    &_content
+      text-align: center
+    &_bg
+      background: url("../images/dest/promo_bg.png") 0 bottom no-repeat
+      min-height: 915px
+      min-width: 1170px
+    h2
+      font-weight: bold
+      font-size: 4em
+      line-height: 48px
+      color: white
+.why
+  &__box
+    max-width: 440px
+    max-height: 477px
+    box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.15)
+    border-radius: 20px
+    border: 5px solid $bordercolor
+    background-color: white
+.calc
+  &__inner
+    min-height: 495px
+    background: url("../images/dest/calc-bg.png") left center no-repeat
+    background-color: #eff7ff
+    border: 2px solid #ffffff
+    border-radius: 15px
+.stack
+  min-height: 346px
+  background-color: #eff7ff
 
 
 
